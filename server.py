@@ -81,7 +81,7 @@ NOTES_PROMPT = {
 
 输出格式（Markdown）：
 
-## 音频纪要
+## 语音笔记
 
 ### 📋 基本信息
 - 时长：
@@ -109,7 +109,7 @@ Based on the transcript provided, produce a structured meeting notes document in
 
 Output format (Markdown):
 
-## Meeting Notes
+## Voice Notes
 
 ### 📋 Overview
 - Duration:
@@ -388,7 +388,7 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     print("=" * 50)
-    print("  🎙️  Meeting Notes Generator")
+    print("  🎙️  Voice Notes Generator")
     print("=" * 50)
     print(f"📁 Default output folder: {DEFAULT_OUTPUT_DIR}")
     print(f"🌐 Starting server...")

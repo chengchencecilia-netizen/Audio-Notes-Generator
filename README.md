@@ -1,4 +1,4 @@
-# Meeting Notes Generator · 会议纪要生成工具
+# Voice Notes Generator · 语音笔记生成工具
 
 [English](#english) · [中文](#中文)
 
@@ -68,9 +68,9 @@ Browser opens automatically at `http://localhost:5001`. Keep the Terminal window
 1. Enter your API key in the UI
 2. Choose a model from the dropdown
 3. Upload your audio file (mp3, m4a, wav, mp4, flac…)
-4. Set output directory and format, click **Generate Meeting Notes**
+4. Set output directory and format, click **Generate Voice Notes**
 
-Notes are saved to the directory you specified (defaults to `~/Desktop/MeetingNotes/`).
+Notes are saved to the directory you specified (defaults to `~/Desktop/VoiceNotes/`).
 
 ### Windows (limited support)
 
@@ -162,9 +162,9 @@ python3 server.py
 1. 在界面中输入 API Key
 2. 从下拉菜单选择模型
 3. 上传音频文件（mp3、m4a、wav、mp4、flac……）
-4. 设置保存目录和格式，点击 **生成会议纪要**
+4. 设置保存目录和格式，点击 **生成语音笔记**
 
-纪要保存到你指定的目录（默认 `~/Desktop/MeetingNotes/`）。
+笔记保存到你指定的目录（默认 `~/Desktop/VoiceNotes/`）。
 
 ### Windows（有限支持）
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meeting Notes Generator</title>
+<title>Voice Notes Generator</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
   /* ── Theme variables ──────────────────────────────────────────── */
@@ -559,13 +559,13 @@ python3 server.py</pre>
       'drop-text':       '拖入音频文件，或点击选择',
       'drop-hint':       '支持 mp3、m4a、wav、mp4、flac 等格式',
       'btn-change':      '✕ 重选',
-      'btn-generate':    '生成转录文稿 + 音频纪要',
+      'btn-generate':    '生成转录文稿 + 语音笔记',
       'step-upload':     '上传音频文件',
       'step-transcribe': 'Whisper 语音转文字（本地，需 1-5 分钟）',
-      'step-summarize':  'AI 生成转录文稿和音频纪要',
+      'step-summarize':  'AI 生成转录文稿和语音笔记',
       'step-save':       '保存到指定目录',
       'result-transcript':'转录文稿',
-      'result-notes':    '音频纪要',
+      'result-notes':    '语音笔记',
       'speaker-note':    '⚠ 发言人识别为 AI 推断，仅供参考',
       'btn-copy':        '复制',
     },
@@ -583,21 +583,21 @@ python3 server.py</pre>
       'drop-text':       'Drop audio file here, or click to select',
       'drop-hint':       'mp3, m4a, wav, mp4, flac, etc.',
       'btn-change':      '✕ Change',
-      'btn-generate':    'Generate Transcript + Audio Notes',
+      'btn-generate':    'Generate Transcript + Voice Notes',
       'step-upload':     'Uploading file',
       'step-transcribe': 'Whisper transcription (local, takes 1-5 min)',
-      'step-summarize':  'AI generating transcript and audio notes',
+      'step-summarize':  'AI generating transcript and voice notes',
       'step-save':       'Saving to output directory',
       'result-transcript':'Transcript',
-      'result-notes':    'Audio Notes',
+      'result-notes':    'Voice Notes',
       'speaker-note':    '⚠ Speaker labels are AI-estimated',
       'btn-copy':        'Copy',
     }
   };
 
   const APP_TITLE = {
-    zh: '音频<strong>纪要</strong>生成工具',
-    en: 'Audio <strong>Notes</strong> Generator',
+    zh: '语音<strong>笔记</strong>生成工具',
+    en: 'Voice <strong>Notes</strong> Generator',
   };
 
   let currentLang = 'zh';
