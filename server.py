@@ -308,17 +308,18 @@ class Handler(BaseHTTPRequestHandler):
 
             model_val = form.getvalue("model", "").strip()
             if "||" not in model_val:
-                self._json({"success": False, "error": "Please select a model"})
+                self._json({"success": False, "error": "请先选择模型 / Please select a model"})
                 return
             provider_id, model = model_val.split("||", 1)
             if provider_id not in PROVIDERS:
-                self._json({"success": False, "error": f"Unknown provider: {provider_id}"})
+                self._json({"success": False, "error": f"未知服务商 / Unknown provider: {provider_id}"})
                 return
 
             api_key = form.getvalue(f"api_key_{provider_id}", "").strip()
             save_keys = form.getvalue("save_keys", "false") == "true"
             lang = form.getvalue("lang", "zh")
-            ui_lang = form.getvalue("ui_lang", "zh") if form.getvalue("ui_lang", "zh") in ("zh", "en") else "zh"
+            ui_lang_raw = form.getvalue("ui_lang", "zh")
+            ui_lang = ui_lang_raw if ui_lang_raw in ("zh", "en") else "zh"
             fmt = form.getvalue("format", "md").strip()
             output_dir = form.getvalue("output_dir", DEFAULT_OUTPUT_DIR).strip() or DEFAULT_OUTPUT_DIR
             audio_field = form["audio"] if "audio" in form else None
@@ -336,10 +337,13 @@ class Handler(BaseHTTPRequestHandler):
                     save_config(keys_to_save)
 
             if not api_key:
-                self._json({"success": False, "error": f"Please enter your {PROVIDERS[provider_id]['name']} API Key"})
+                name = PROVIDERS[provider_id]["name"]
+                msg = f"请输入 {name} API Key" if ui_lang == "zh" else f"Please enter your {name} API Key"
+                self._json({"success": False, "error": msg})
                 return
             if audio_field is None or not audio_field.filename:
-                self._json({"success": False, "error": "Please upload an audio file"})
+                msg = "请上传音频文件" if ui_lang == "zh" else "Please upload an audio file"
+                self._json({"success": False, "error": msg})
                 return
 
             suffix = Path(audio_field.filename).suffix
