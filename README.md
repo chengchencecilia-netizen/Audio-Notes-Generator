@@ -44,6 +44,8 @@ pip3 install openai-whisper openai
 
 > Using Claude requires an extra package: `pip3 install anthropic`
 
+> **Note:** Some providers (OpenAI, Anthropic) may be inaccessible in certain regions. If a provider doesn't work, try switching to another — Groq is free and broadly accessible.
+
 **4. Start**
 
 ```bash
@@ -79,6 +81,10 @@ The Python code is cross-platform. To run on Windows:
 - Only the transcript text is sent to the AI API.
 - First run downloads the Whisper model (~140 MB).
 - The server is single-threaded; one job at a time.
+
+---
+
+Built by [katchen.me](https://katchen.me/)
 
 ---
 
@@ -122,6 +128,8 @@ pip3 install openai-whisper openai
 
 > 使用 Claude 需额外安装：`pip3 install anthropic`
 
+> **提示：** 部分服务商（如 OpenAI、Anthropic）在某些地区可能无法访问。如遇连接失败，建议切换其他服务商——Groq 免费且访问限制较少。
+
 **4. 启动**
 
 ```bash
@@ -159,3 +167,7 @@ Python 代码本身跨平台，Windows 上运行步骤：
 - 只有文字转录结果会发送给 AI API。
 - 首次运行会下载 Whisper 模型（约 140 MB）。
 - 服务器是单线程的，一次处理一个任务。
+
+---
+
+作者：[katchen.me](https://katchen.me/)
