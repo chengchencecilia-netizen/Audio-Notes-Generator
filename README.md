@@ -18,6 +18,14 @@ Upload a recording → local Whisper transcription → AI summary → saved as M
 
 Whisper supports 90+ languages. The UI and output language switch between English and Chinese.
 
+### Screenshots
+
+![Built-in setup guide](screenshots/Image_20260605194434_160_36.png)
+
+![English UI](screenshots/Image_20260605190742_156_36_clean.png)
+
+![Output files auto-named in your chosen directory](screenshots/Image_20260605190958_157_36_clean.png)
+
 ### Setup
 
 **1. Install Python 3**
@@ -101,6 +109,14 @@ Built by [katchen.me](https://katchen.me/)
 上传录音 → Whisper 本地转录 → AI 生成结构化纪要 → 保存为 Markdown 或纯文本。
 
 Whisper 支持 90+ 种语言。界面和输出语言可在中文/英文之间切换。
+
+### 截图
+
+![内置安装说明（中文）](screenshots/instruction.png)
+
+![中文界面](screenshots/Image_20260605190721_155_36_clean.png)
+
+![输出文件自动命名保存](screenshots/Image_20260605190958_157_36_clean.png)
 
 ### 安装
 
